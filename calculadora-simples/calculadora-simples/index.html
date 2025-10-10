@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            
+            <!-- Display da calculadora -->
+            <div class="display">
+                {{ display }}
+            </div>
+            
+            <!-- Botões da calculadora -->
+            <div class="botoes">
+                <!-- Primeira linha: Limpar -->
+                <button @click="limpar" class="botao limpar">C</button>
+                <button class="botao vazio"></button>
+                <button class="botao vazio"></button>
+                <button @click="operacao('/')" class="botao operador">÷</button>
+                
+                <!-- Segunda linha: 7, 8, 9, × -->
+                <button @click="numero('7')" class="botao numero">7</button>
+                <button @click="numero('8')" class="botao numero">8</button>
+                <button @click="numero('9')" class="botao numero">9</button>
+                <button @click="operacao('*')" class="botao operador">×</button>
+                
+                <!-- Terceira linha: 4, 5, 6, - -->
+                <button @click="numero('4')" class="botao numero">4</button>
+                <button @click="numero('5')" class="botao numero">5</button>
+                <button @click="numero('6')" class="botao numero">6</button>
+                <button @click="operacao('-')" class="botao operador">-</button>
+                
+                <!-- Quarta linha: 1, 2, 3, + -->
+                <button @click="numero('1')" class="botao numero">1</button>
+                <button @click="numero('2')" class="botao numero">2</button>
+                <button @click="numero('3')" class="botao numero">3</button>
+                <button @click="operacao('+')" class="botao operador">+</button>
+                
+                <!-- Quinta linha: 0, ., = -->
+                <button @click="numero('0')" class="botao numero zero">0</button>
+                <button @click="decimal" class="botao numero">.</button>
+                <button @click="calcular" class="botao igual">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

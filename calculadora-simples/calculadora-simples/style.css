@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculadora {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.display {
+    background-color: #000;
+    color: white;
+    font-size: 28px;
+    padding: 15px;
+    text-align: right;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.botao {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+.numero {
+    background-color: #666;
+    color: white;
+}
+
+.operador {
+    background-color: #ff9500;
+    color: white;
+}
+
+.igual {
+    background-color: #ff9500;
+    color: white;
+}
+
+.limpar {
+    background-color: #a6a6a6;
+    color: black;
+}
+
+.vazio {
+    background-color: #a6a6a6;
+    color: black;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+/* Responsividade básica */
+@media (max-width: 400px) {
+    .calculadora {
+        width: 280px;
+        padding: 15px;
+    }
+    
+    .botao {
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    .display {
+        font-size: 24px;
+    }
+}
